@@ -18,6 +18,8 @@ public class PruebaRacional {
         System.out.println(Racional.division(r1, r2));
 
         System.out.println(Racional.igualdad(r2, r2));
+        
+        System.out.println(Racional.aleatorio());
 
     }
 }

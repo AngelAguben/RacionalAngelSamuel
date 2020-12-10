@@ -5,6 +5,8 @@
  */
 package angel.racionalangelsamuel;
 
+import java.util.Random;
+
 /**
  *
  * @author angel
@@ -110,5 +112,20 @@ public class Racional {
             igual = true;
         }
         return igual;
+    }
+    
+    public static Racional aleatorio() {
+        // Esté método dará un racional aleatorio
+        Racional alea = new Racional();
+        // Creamos un random
+        Random random = new Random ();
+        
+        alea.a = random.nextInt();
+        alea.b = random.nextInt();
+        if(alea.b == 0){
+            alea.b = random.nextInt();
+        }
+        
+        return alea;
     }
 }
