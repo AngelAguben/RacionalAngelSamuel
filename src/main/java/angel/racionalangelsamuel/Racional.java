@@ -48,11 +48,6 @@ public class Racional {
         }
     }
 
-    // Método para imprimir por consola
-    public void imprimirConsola() {
-        System.out.println("Número racional " + a + "/" + b);
-    }
-
     // Añade el método toString
     @Override
     public String toString() {
@@ -60,18 +55,20 @@ public class Racional {
     }
 
     // Método de suma
-    public int sumar(int a, int b, int c, int d) {
-        a = this.a;
-        b = this.b;
-        int resultado = 0;
+    public void sumar(Racional x) {
 
         // Si b es igual a d (los denominadores iguales)
-        if (b == d) {
-            resultado = (a + c) / b;
+        if (this.b == x.b) {
+            this.a += x.a;
         } else { // Si no son iguales hará lo siguiente
-            resultado = ((a * d) + (b * c)) / (b * d);
+            this.a=this.a*x.b+this.b*x.a;
+            this.b=b*x.b;
         }
-        return resultado;
+    }
+
+    // Método para imprimir por consola
+    public void imprimirConsola() {
+        System.out.println("Número racional " + a + "/" + b);
     }
 
     // Método de resta

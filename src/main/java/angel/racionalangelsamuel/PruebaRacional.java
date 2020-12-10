@@ -12,9 +12,10 @@ package angel.racionalangelsamuel;
 public class PruebaRacional {
 
     public static void main(String[] args) {
-        Racional r1 = new Racional(14, 0);
+        Racional r1 = new Racional(14, 5);
         Racional r2 = new Racional(18, 5);
-        
+
+        r1.sumar(r2);
         r1.imprimirConsola();
 
     }
