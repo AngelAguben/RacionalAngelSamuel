@@ -49,4 +49,20 @@ public class Racional {
         System.out.println("Número racional " + a + "/" + b);
     }
 
+    @Override
+    public String toString() {
+        return a + "/" + b;
+    }
+
+    private int sumar(int a, int b, int c, int d) {
+        a = this.a;
+        b = this.b;
+        int resultado = 0;
+        if (b == d) {
+            resultado = (a + c) / b;
+        } else {
+            resultado = ((a * d) + (b * c)) / (b * d);
+        }
+        return resultado;
+    }
 }
