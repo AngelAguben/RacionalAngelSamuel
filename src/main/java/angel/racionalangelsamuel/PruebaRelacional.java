@@ -10,5 +10,8 @@ package angel.racionalangelsamuel;
  * @author angel
  */
 public class PruebaRelacional {
-    
+
+    public static void main(String[] args) {
+
+    }
 }

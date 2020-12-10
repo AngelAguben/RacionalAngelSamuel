@@ -21,11 +21,13 @@ public class Racional {
     public Racional(int a, int b) {
         this.a = a;
         this.b = b;
+        // Si b es 0 se convertirá a 1
         if (b == 0) {
             this.b = 1;
         }
     }
 
+    // Añade los getter y setters
     public int getA() {
         return a;
     }
@@ -40,33 +42,39 @@ public class Racional {
 
     public void setB(int b) {
         this.b = b;
+        // Si b es 0 se convertirá a 1
         if (b == 0) {
             this.b = 1;
         }
     }
 
+    // Método para imprimir por consola
     public void imprimirConsola() {
         System.out.println("Número racional " + a + "/" + b);
     }
 
+    // Añade el método toString
     @Override
     public String toString() {
         return a + "/" + b;
     }
 
+    // Método de suma
     private int sumar(int a, int b, int c, int d) {
         a = this.a;
         b = this.b;
         int resultado = 0;
+
+        // Si b es igual a d (los denominadores iguales)
         if (b == d) {
             resultado = (a + c) / b;
-        } else {
+        } else { // Si no son iguales hará lo siguiente
             resultado = ((a * d) + (b * c)) / (b * d);
         }
         return resultado;
     }
-    
-    
+
+    // Método de resta
     private int restar(int a, int b, int c, int d) {
         a = this.a;
         b = this.b;
