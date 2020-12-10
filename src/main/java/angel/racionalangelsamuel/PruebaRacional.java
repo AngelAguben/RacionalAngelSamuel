@@ -9,7 +9,7 @@ package angel.racionalangelsamuel;
  *
  * @author angel
  */
-public class PruebaRelacional {
+public class PruebaRacional {
 
     public static void main(String[] args) {
         Racional r1 = new Racional(14, 0);
