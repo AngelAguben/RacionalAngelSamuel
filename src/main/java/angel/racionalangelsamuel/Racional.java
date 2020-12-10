@@ -45,7 +45,8 @@ public class Racional {
         }
     }
 
-    
-    
-    
+    public void imprimirConsola() {
+        System.out.println("Número racional " + a + "/" + b);
+    }
+
 }
