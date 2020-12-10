@@ -60,7 +60,7 @@ public class Racional {
     }
 
     // Método de suma
-    private int sumar(int a, int b, int c, int d) {
+    public int sumar(int a, int b, int c, int d) {
         a = this.a;
         b = this.b;
         int resultado = 0;

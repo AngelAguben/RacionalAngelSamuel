@@ -12,6 +12,10 @@ package angel.racionalangelsamuel;
 public class PruebaRelacional {
 
     public static void main(String[] args) {
+        Racional r1 = new Racional(14, 0);
+        Racional r2 = new Racional(18, 5);
+        
+        r1.imprimirConsola();
 
     }
 }
