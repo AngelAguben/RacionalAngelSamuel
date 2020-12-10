@@ -65,4 +65,17 @@ public class Racional {
         }
         return resultado;
     }
+    
+    
+    private int restar(int a, int b, int c, int d) {
+        a = this.a;
+        b = this.b;
+        int resultado = 0;
+        if (b == d) {
+            resultado = (a - c) / b;
+        } else {
+            resultado = ((a * d) - (b * c)) / (b * d);
+        }
+        return resultado;
+    }
 }
