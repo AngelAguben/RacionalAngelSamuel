@@ -85,26 +85,28 @@ public class Racional {
 
     public void producto(Racional x) {
         // Esté método multiplicará
-        
+
         this.a *= x.a;
         this.b = b * x.b;
 
     }
 
-    public void division(Racional x) {
+    public static Racional division(Racional x, Racional y) {
         // Esté método dividirá
+        Racional divi = new Racional();
         
-        this.a /= x.a;
-        this.b = b / x.b;
-
+        divi.a = x.a * y.b;
+        divi.b = x.b * y.a;
+        return divi;
     }
 
-    public boolean igualdad(Racional x, Racional y) {
+    public static boolean igualdad(Racional x, Racional y) {
         boolean igual = false;
+        int numerador = 0, denominador = 0;
 
-        this.a = x.a * y.b;
-        this.b = x.b * y.a;
-        if (this.a == this.b) {
+        numerador = x.a * y.b;
+        denominador = x.b * y.a;
+        if (numerador == denominador) {
             igual = true;
         }
         return igual;

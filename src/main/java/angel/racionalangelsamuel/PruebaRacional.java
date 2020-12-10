@@ -15,7 +15,9 @@ public class PruebaRacional {
         Racional r1 = new Racional(2, 5);
         Racional r2 = new Racional(4, 10);
 
-        System.out.println(r1.igualdad(r1, r2));
+        System.out.println(Racional.division(r1, r2));
+
+        System.out.println(Racional.igualdad(r2, r2));
 
     }
 }
