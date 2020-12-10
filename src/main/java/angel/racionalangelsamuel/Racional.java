@@ -84,22 +84,29 @@ public class Racional {
     }
 
     public void producto(Racional x) {
-
-        // Si b es igual a d (los denominadores iguales)
+        // Esté método multiplicará
+        
         this.a *= x.a;
-
         this.b = b * x.b;
+
+    }
+
+    public void division(Racional x) {
+        // Esté método dividirá
+        
+        this.a /= x.a;
+        this.b = b / x.b;
 
     }
 
     public boolean igualdad(Racional x, Racional y) {
         boolean igual = false;
-       
-       this.a = x.a * y.b;
-       this.b = x.b * y.a;
-       if(this.a == this.b){
-           igual = true;
-       }
-       return igual;
+
+        this.a = x.a * y.b;
+        this.b = x.b * y.a;
+        if (this.a == this.b) {
+            igual = true;
+        }
+        return igual;
     }
 }
