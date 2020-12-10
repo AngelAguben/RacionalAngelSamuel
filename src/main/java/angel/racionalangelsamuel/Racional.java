@@ -10,5 +10,12 @@ package angel.racionalangelsamuel;
  * @author angel
  */
 public class Racional {
+
+    private int a, b;
+
+    public Racional() {
+        this.a = 1;
+        this.b = 1;
+    }
     
 }
