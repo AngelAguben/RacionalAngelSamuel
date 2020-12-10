@@ -13,14 +13,14 @@ import java.util.Random;
  */
 public class Racional {
 
-    private int a, b;
+    private double a, b;
 
     public Racional() {
         this.a = 1;
         this.b = 1;
     }
 
-    public Racional(int a, int b) {
+    public Racional(double a, double b) {
         this.a = a;
         this.b = b;
         // Si b es 0 se convertirá a 1
@@ -30,11 +30,11 @@ public class Racional {
     }
 
     // Añade los getter y setters
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
@@ -68,7 +68,7 @@ public class Racional {
         if (this.b == x.b) {
             this.a += x.a;
         } else { // Si no son iguales hará lo siguiente
-            this.a = this.a * x.b + this.b * x.a;
+            this.a = (this.a * x.b) + (this.b * x.a);
             this.b = b * x.b;
         }
     }
@@ -96,7 +96,7 @@ public class Racional {
     public static Racional division(Racional x, Racional y) {
         // Esté método dividirá
         Racional divi = new Racional();
-        
+
         divi.a = x.a * y.b;
         divi.b = x.b * y.a;
         return divi;
@@ -104,7 +104,7 @@ public class Racional {
 
     public static boolean igualdad(Racional x, Racional y) {
         boolean igual = false;
-        int numerador = 0, denominador = 0;
+        double numerador = 0, denominador = 0;
 
         numerador = x.a * y.b;
         denominador = x.b * y.a;
@@ -113,19 +113,32 @@ public class Racional {
         }
         return igual;
     }
-    
-    public static Racional aleatorio() {
+
+//    public static Racional aleatorio() {
+//        // Esté método dará un racional aleatorio
+//        Racional alea = new Racional();
+//        // Creamos un random
+//        Random random = new Random();
+//
+//        alea.a = random.nextInt();
+//        alea.b = random.nextInt();
+//        if (alea.b == 0) {
+//            alea.b = random.nextInt();
+//        }
+//
+//        return alea;
+//    }
+    public static double aleatorio() {
         // Esté método dará un racional aleatorio
-        Racional alea = new Racional();
+        double numeroAleatorio;
         // Creamos un random
-        Random random = new Random ();
-        
-        alea.a = random.nextInt();
-        alea.b = random.nextInt();
-        if(alea.b == 0){
-            alea.b = random.nextInt();
+        Random random = new Random();
+
+        numeroAleatorio = random.nextInt();
+        if(numeroAleatorio<=0){
+            numeroAleatorio = random.nextInt();
         }
-        
-        return alea;
+
+        return numeroAleatorio;
     }
 }
