@@ -54,6 +54,11 @@ public class Racional {
         return a + "/" + b;
     }
 
+    // Método para imprimir por consola
+    public void imprimirConsola() {
+        System.out.println("Número racional " + a + "/" + b);
+    }
+
     // Método de suma
     public void sumar(Racional x) {
 
@@ -61,26 +66,20 @@ public class Racional {
         if (this.b == x.b) {
             this.a += x.a;
         } else { // Si no son iguales hará lo siguiente
-            this.a=this.a*x.b+this.b*x.a;
-            this.b=b*x.b;
+            this.a = this.a * x.b + this.b * x.a;
+            this.b = b * x.b;
         }
-    }
-
-    // Método para imprimir por consola
-    public void imprimirConsola() {
-        System.out.println("Número racional " + a + "/" + b);
     }
 
     // Método de resta
-    private int restar(int a, int b, int c, int d) {
-        a = this.a;
-        b = this.b;
-        int resultado = 0;
-        if (b == d) {
-            resultado = (a - c) / b;
-        } else {
-            resultado = ((a * d) - (b * c)) / (b * d);
+    public void restar(Racional x) {
+
+        // Si b es igual a d (los denominadores iguales)
+        if (this.b == x.b) {
+            this.a -= x.a;
+        } else { // Si no son iguales hará lo siguiente
+            this.a = this.a * x.b - this.b * x.a;
+            this.b = b * x.b;
         }
-        return resultado;
     }
 }
