@@ -17,6 +17,7 @@ public class AppRacional {
         
         
         System.out.println(Racional.igualdad(z, k));
+        System.out.println(Racional.division(z, k));
 
     }
 }
