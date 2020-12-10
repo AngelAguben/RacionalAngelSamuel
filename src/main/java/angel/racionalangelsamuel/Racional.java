@@ -34,4 +34,18 @@ public class Racional {
         return b;
     }
 
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+        if (b == 0) {
+            this.b = 1;
+        }
+    }
+
+    
+    
+    
 }
