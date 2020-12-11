@@ -18,11 +18,12 @@ public class AppRacional {
         Racional z = new Racional(4, 5);
         // Crearemos un objeto Racional z con sus valores
         Racional k = new Racional(3, 4);
-        // Creará un objeto para guardar los datos aleatorios que crearemos
+        // Crearemos un objeto para guardar los datos aleatorios que crearemos
         Racional alea = new Racional();
         // Crearemos un objeto llamado divi para guardar la división a realizar
         Racional divi = new Racional();
-        DecimalFormat df = new DecimalFormat("0.00");
+        
+        
         // Guardaremos en alea un número Racional aleatorio
         alea = Racional.aleatorio();
         // Mostraremos por pantalla el objeto alea
@@ -38,13 +39,18 @@ public class AppRacional {
         z.sumar(k);
         // Mostraremos por pantalla el resultado de la suma
         System.out.println("Suma = " + z);
-//        df.format(z.getA());
-//        df.format(z.getB());
-System.out.println(df.format(alea.getB()));    
-//        df.format(alea.getA());
-        System.out.println(alea.getB());
-        System.out.printf("numero es %.2f", alea.getB());
-//        System.out.println(df.format(k));
-//        System.out.println(df.format(alea));
+        
+        // Racional z
+        System.out.printf("Racional z es %.2f", z.getA());
+        System.out.printf("/%.2f" , z.getB());
+        System.out.println("");
+        // Racional k
+        System.out.printf("Racional k es %.2f", k.getA());
+        System.out.printf("/%.2f" , k.getB());
+        System.out.println("");
+        
+        // Racional alea
+        System.out.printf("Racional alea es %.2f", alea.getA());
+        System.out.printf("/%.2f" , alea.getB());
     }
 }
