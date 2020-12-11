@@ -122,9 +122,9 @@ public class Racional {
 
         alea.a = random.nextInt();
         alea.b = random.nextInt();
-        do{
+        do {
             alea.b = random.nextInt();
-        }while(alea.b==0);
+        } while (alea.b == 0);
 
         return alea;
     }
