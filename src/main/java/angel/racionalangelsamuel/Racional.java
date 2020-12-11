@@ -13,13 +13,17 @@ import java.util.Random;
  */
 public class Racional {
 
+    // Hemos cambiado a double para poder limitar la salida a decimales
     private double a, b;
-
+    
+    // Constructor por defecto, indicando como numerador y denominador el valor 1.
     public Racional() {
         this.a = 1;
         this.b = 1;
     }
 
+    // Constructor parametrizado. Se debe controlar que el denominador no es 
+    // cero, en tal caso se asignará el valor 1
     public Racional(double a, double b) {
         this.a = a;
         this.b = b;
@@ -53,6 +57,7 @@ public class Racional {
     // Añade el método toString
     @Override
     public String toString() {
+        // Devolverá lo siguiente;
         return a + "/" + b;
     }
 
@@ -84,58 +89,57 @@ public class Racional {
             this.b = b * x.b;
         }
     }
-
+    
+    //Método de multiplicar
     public void producto(Racional x) {
-        // Esté método multiplicará
-
+        // Esté método multiplicará lo siguiente
         this.a *= x.a;
         this.b = b * x.b;
 
     }
-
+    // Método de clase de division
     public static Racional division(Racional x, Racional y) {
-        // Esté método dividirá
+        // Crearemos un nuevo objeto racional para la division
         Racional divi = new Racional();
-
+        // Esté método dividirá lo siguiente
         divi.a = x.a * y.b;
         divi.b = x.b * y.a;
+        // Dewvolverá el objeto divi
         return divi;
     }
 
+    // Crearemos un método de clase para ver si son iguales o no los dos racionales
     public static boolean igualdad(Racional x, Racional y) {
+        // Crearemos un boolean para después utilizalo
         boolean igual = false;
+        // Crearemos dos double para comprovar luego si los resultados son iguales
         double numerador = 0, denominador = 0;
-
+        
         numerador = x.a * y.b;
         denominador = x.b * y.a;
+        // Si numerador == denominador igual será true, si no, seguirá siendo false
         if (numerador == denominador) {
             igual = true;
         }
+        // Devolveremos el booelan
         return igual;
     }
 
+    // Método aleatorio para crear un racional con valores double 
     public static Racional aleatorio() {
         // Esté método dará un racional aleatorio
+        // Crearemos un objeto alea para guardar los datos aleatorios
         Racional alea = new Racional();
         // Creamos un random
         Random random = new Random();
 
         alea.a = random.nextDouble();
-        alea.b = random.nextDouble();
-        do {
+        do { 
             alea.b = random.nextDouble();
-        } while (alea.b == 0);
-
+            // Mientras alea.b sea igual a 0 se ejecutará el bucle
+        } while (alea.b == 0); 
+        
+        // Devolverá el objeto alea
         return alea;
     }
-//    public static double aleatorio() {
-//        // Esté método dará un racional aleatorio
-//        double numeroAleatorio;
-//        // Creamos un random
-//        Random random = new Random();
-//        do{
-//        numeroAleatorio = random.nextInt();
-//        }while(numeroAleatorio<=0);
-//        return numeroAleatorio;
-//    }
 }
