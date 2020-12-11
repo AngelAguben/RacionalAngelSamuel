@@ -132,10 +132,11 @@ public class Racional {
         Racional alea = new Racional();
         // Creamos un random
         Random random = new Random();
-
-        alea.a = random.nextDouble();
+        
+        // alea.a será igual a la concatenación de un int hasta 100 y un double 
+        alea.a = random.nextInt(100) + random.nextDouble();
         do { 
-            alea.b = random.nextDouble();
+            alea.b = random.nextInt(100) + random.nextDouble();
             // Mientras alea.b sea igual a 0 se ejecutará el bucle
         } while (alea.b == 0); 
         
