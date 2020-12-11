@@ -40,7 +40,7 @@ public class AppRacional {
         System.out.println("Suma = " + z);
 //        df.format(z.getA());
 //        df.format(z.getB());
-//        df.format(alea.getB());
+System.out.println(df.format(alea.getB()));    
 //        df.format(alea.getA());
         System.out.println(alea.getB());
         System.out.printf("numero es %.2f", alea.getB());

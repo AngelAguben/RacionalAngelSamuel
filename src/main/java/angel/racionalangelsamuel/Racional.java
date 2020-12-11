@@ -120,10 +120,10 @@ public class Racional {
         // Creamos un random
         Random random = new Random();
 
-        alea.a = random.nextInt();
-        alea.b = random.nextInt();
+        alea.a = random.nextDouble();
+        alea.b = random.nextDouble();
         do {
-            alea.b = random.nextInt();
+            alea.b = random.nextDouble();
         } while (alea.b == 0);
 
         return alea;
