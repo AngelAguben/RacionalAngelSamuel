@@ -133,12 +133,9 @@ public class Racional {
         double numeroAleatorio;
         // Creamos un random
         Random random = new Random();
-
+        do{
         numeroAleatorio = random.nextInt();
-        if(numeroAleatorio<=0){
-            numeroAleatorio = random.nextInt();
-        }
-
+        }while(numeroAleatorio<=0);
         return numeroAleatorio;
     }
 }
