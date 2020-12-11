@@ -22,8 +22,7 @@ public class AppRacional {
         Racional alea = new Racional();
         // Crearemos un objeto llamado divi para guardar la división a realizar
         Racional divi = new Racional();
-        
-        
+
         // Guardaremos en alea un número Racional aleatorio
         alea = Racional.aleatorio();
         // Mostraremos por pantalla el objeto alea
@@ -39,8 +38,9 @@ public class AppRacional {
         z.sumar(k);
         // Mostraremos por pantalla el resultado de la suma
         System.out.println("Suma = " + z);
-        
-        // Racional z
+
+        // Racional z 
+        //Lo que hace %.2f es formatear el double que entra y hace que solo tenga 2 decimales.
         System.out.printf("Racional z es %.2f", z.getA());
         System.out.printf("/%.2f" , z.getB());
         System.out.println("");
@@ -48,7 +48,7 @@ public class AppRacional {
         System.out.printf("Racional k es %.2f", k.getA());
         System.out.printf("/%.2f" , k.getB());
         System.out.println("");
-        
+
         // Racional alea
         System.out.printf("Racional alea es %.2f", alea.getA());
         System.out.printf("/%.2f" , alea.getB());
